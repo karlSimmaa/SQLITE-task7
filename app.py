@@ -7,7 +7,7 @@ import sqlite3
 DATABASE = "fighters.db"
 
 #functions
-def print_all_aircraft(args):
+def print_all_aircraft():
     """print all the aircraft nicely"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
@@ -21,7 +21,7 @@ def print_all_aircraft(args):
     #loop finished here
     db.close()
 
-def print_all_aircraft_by_speed(args):
+def print_all_aircraft_by_speed():
     """print all the aircraft by speed"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
@@ -35,7 +35,7 @@ def print_all_aircraft_by_speed(args):
     #loop finished here
     db.close()
 
-def print_all_aircraft_by_g(args):
+def print_all_aircraft_by_g():
     """print all the aircraft by max g"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
@@ -49,7 +49,7 @@ def print_all_aircraft_by_g(args):
     #loop finished here
     db.close()
 
-def print_all_aircraft_by_climb(args):
+def print_all_aircraft_by_climb():
     """print all the aircraft by climb rate"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
@@ -63,7 +63,7 @@ def print_all_aircraft_by_climb(args):
     #loop finished here
     db.close()
 
-def print_all_aircraft_by_range(args):
+def print_all_aircraft_by_range():
     """print all the aircraft by range"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
@@ -77,7 +77,7 @@ def print_all_aircraft_by_range(args):
     #loop finished here
     db.close()
 
-def print_all_aircraft_by_payload(args):
+def print_all_aircraft_by_payload():
     """print all the aircraft by payload"""
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
