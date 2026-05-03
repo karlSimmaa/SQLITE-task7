@@ -21,6 +21,34 @@ def print_all_aircraft():
     #loop finished here
     db.close()
 
+def print_all_aircraft_by_speed(args):
+    """print all the aircraft by speed"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * from fighter ORDER BY speed DESC;"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all the results
+    print(f"name    speed   max_g climb range payload")
+    for fighter in results:
+        print(f"{fighter[1]:<30}{fighter[2]:<8}{fighter[3]:<6}{fighter[4]:<6}{fighter[5]:<6}{fighter[6]:<6}")
+    #loop finished here
+    db.close()
+
+def print_all_aircraft_by_g():
+    """print all the aircraft by max g"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * from fighter ORDER BY max_g DESC;"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all the results
+    print(f"name    speed   max_g climb range payload")
+    for fighter in results:
+        print(f"{fighter[1]:<30}{fighter[2]:<8}{fighter[3]:<6}{fighter[4]:<6}{fighter[5]:<6}{fighter[6]:<6}")
+    #loop finished here
+    db.close()
+
 #main code
 while True:
     #get the user's input
